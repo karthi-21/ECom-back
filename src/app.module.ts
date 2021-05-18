@@ -6,12 +6,9 @@ import { ProductModule } from './product/product.module';
 
 @Module({
   imports: [
-    MongooseModule.forRoot(
-      'mongodb+srv://lucifer:lucifer210498@cluster0.ib7e8.mongodb.net/ECom?retryWrites=true&w=majority',
-      {
-        useNewUrlParser: true,
-      },
-    ),
+    MongooseModule.forRoot('MONGO_URI', {
+      useNewUrlParser: true,
+    }),
     ProductModule,
   ],
   controllers: [AppController],
